@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="style.css">
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">"
+<style>
+  body{
+    background-color: black;
+    color: white;
+  }
+  input{
+    border-radius: 5PX;
+    width: 60PX;
+  }
+  output{
+    background-color: black;
+    color: white;
+  }
+  .btn{
+    border:  2px,black,solid;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+  }
+  output{
+    width: 100px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+</style> 
+</head>
+
+<body>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <center>
+          <img src="image/istockphoto-501356978-1024x1024.jpg" class="card-img-top" alt="PONGAL IMAGE"height="300px">
+        </center>
+          <div class="card-body">
+            <h5 class="card-title">PONGAL</h5>
+            <p class="card-text">ORDER&emsp;<input type="number"id="pon">&emsp;TOTAL AMOUNT&emsp;<output class="result1">0</output>&emsp;</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+        <center>
+          <img src="image/Screenshot 2023-12-14 133525.png" class="card-img-top" alt="..."height="300px">
+        </center>
+          <div class="card-body">
+            <h5 class="card-title">CHICKEN</h5>
+            <p class="card-text">ORDER&emsp;<input type="number"id="chi">&emsp;TOTAL AMOUNT&emsp;<output class="result2">0</output>&emsp;</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card"><center>
+          <img src="image/Screenshot 2023-12-14 133720.png" class="card-img-top" alt="..." height="300px"></center>
+          <div class="card-body">
+            <h5 class="card-title">MUTTON</h5>
+            <p class="card-text">ORDER&emsp;<input type="number"id="mut">&emsp;TOTAL AMOUNT&emsp;<output class="result3">0</output>&emsp;</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card"><center>
+          <img src="image/Screenshot 2023-12-14 133803.png" class="card-img-top" alt="..."height="300px"></center>
+          <div class="card-body">
+            <h5 class="card-title">ICE CREAM</h5>
+            <p class="card-text">ORDER&emsp;<input type="number"id="ice">&emsp;TOTAL AMOUNT&emsp;<output class="result4">0</output>&emsp;</p>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  
+</body>
+<script>
+  const chi=eval(document.querySelector("#chi").value);
+  const mut=document.querySelector("#mut").value;
+  const ice=document.querySelector("#ice").value;
+  const btn=document.querySelectorAll("btn");
+  function ponn() {
+    let pon=document.querySelector("#pon");
+   let ponval=pon.value
+   const pontot=ponval*100
+   const result1=document.querySelector(".result1");
+   result1.innerText=pontot;
+}  
+btn,addEventListener("click",ponn)
+
+function chii() {
+    let chi=document.querySelector("#chi");
+   let chival=chi.value
+   const chitot=chival*200
+   const result2=document.querySelector(".result2");
+   result2.innerText=chitot;
+}  
+btn,addEventListener("click",chii)
+
+function mutt() {
+    let mut=document.querySelector("#mut");
+   let mutval=mut.value
+   const muttot=mutval*300
+   const result3=document.querySelector(".result3");
+   result3.innerText=muttot;
+}  
+btn,addEventListener("click",mutt)
+
+function icee() {
+    let ice=document.querySelector("#ice");
+   let iceval=ice.value
+   const pontot=iceval*80
+   const result4=document.querySelector(".result4");
+   result4.innerText=pontot;
+}  
+btn,addEventListener("click",icee)
+const button=document.querySelectorAll(".button");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
